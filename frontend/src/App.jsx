@@ -21,8 +21,8 @@ const App = () => {
   const chatEndRef = useRef(null);
 
   useEffect(() => {
-    // Connect to the deployed backend URL
-    const socketInstance = io("https://saarthi-dvbu.onrender.com");
+    // Connect to the local backend URL
+    const socketInstance = io("http://localhost:3000");
     setSocket(socketInstance);
 
     socketInstance.on("message-response", (data) => {
