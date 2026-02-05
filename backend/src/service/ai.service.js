@@ -10,11 +10,10 @@ const ai = new GoogleGenAI({
   apiKey
 });
 
-async function generateprompt(chatHistory){
-  
- const response = await ai.models.generateContent({
-  model: "gemini-2.5-flash",
-  systemInstructions: `
+async function generateprompt(chatHistory) {
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    systemInstructions: `
 You are a personal AI assistant on Kunal Choudhary's portfolio website.
 
 Your role is to introduce Kunal Choudhary to visitors and answer questions about him.
@@ -32,10 +31,11 @@ Tone guidelines:
 
 Do not generate misleading, harmful, or inappropriate content.
 `,
-  contents: chatHistory,
-});
+    contents: chatHistory,
+  });
 
-  return response.text;
+  return response;
 }
+
 
 module.exports = generateprompt;
