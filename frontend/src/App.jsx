@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     // Connect to backend - use localhost for dev, deployed URL for production
-    const backendUrl = process.env.NODE_ENV === 'production' 
+    const backendUrl = import.meta.env.PROD 
       ? "https://saarthi-dvbu.onrender.com" 
       : "http://localhost:3000";
     const socketInstance = io(backendUrl);
