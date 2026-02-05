@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     // Connect to the deployed backend URL
-    const socketInstance = io("https://nexa-backend-lo3e.onrender.com");
+    const socketInstance = io("https://saarthi-dvbu.onrender.com");
     setSocket(socketInstance);
 
     socketInstance.on("message-response", (data) => {

@@ -10,7 +10,7 @@ const io = new Server(httpServer, {
   cors: {
     origin: [
       "http://localhost:5173",                  // Local development
-      "https://saarthi-frontend.onrender.com" // Deployed frontend
+       "https://saarthi-kappa.vercel.app/" // Deployed frontend
     ],
     methods: ["GET", "POST"]
   }
